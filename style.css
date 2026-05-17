@@ -9,7 +9,89 @@
 
 body{
     background:#f5f5f5;
+}
+
+
+/* TOP NAVBAR */
+
+.top-navbar{
+
+    width:92%;
+
+    margin:20px auto;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px 35px;
+
     display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0px 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.top-logo{
+
+    font-size:36px;
+
+    font-weight:bold;
+
+    color:#7b3ff2;
+
+}
+
+.top-links{
+
+    display:flex;
+
+    gap:35px;
+
+    list-style:none;
+
+}
+
+.top-links li{
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    color:#333;
+
+}
+
+.top-links li:hover{
+
+    color:#7b3ff2;
+
+}
+
+.top-btn{
+
+    background:#7b3ff2;
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
 }
 
 
@@ -17,33 +99,35 @@ body{
 
 .sidebar{
 
-    width:250px;
+    width:230px;
 
-    height:100vh;
+    height:calc(100vh - 120px);
 
     background:white;
 
-    padding:30px 20px;
-
-    box-shadow:0px 4px 15px rgba(0,0,0,0.08);
-
     position:fixed;
 
-    left:0;
+    left:20px;
 
-    top:0;
+    top:100px;
+
+    border-radius:20px;
+
+    padding:25px 18px;
+
+    box-shadow:0px 4px 15px rgba(0,0,0,0.08);
 
 }
 
 .sidebar-logo{
 
-    font-size:34px;
+    font-size:28px;
 
     font-weight:bold;
 
     color:#7b3ff2;
 
-    margin-bottom:50px;
+    margin-bottom:40px;
 
 }
 
@@ -55,9 +139,9 @@ body{
 
 .sidebar-menu li{
 
-    padding:18px 20px;
+    padding:16px 18px;
 
-    margin-bottom:15px;
+    margin-bottom:14px;
 
     border-radius:12px;
 
@@ -65,7 +149,7 @@ body{
 
     transition:0.3s;
 
-    font-size:18px;
+    font-size:17px;
 
 }
 
@@ -89,11 +173,11 @@ body{
 
 .admin-btn{
 
-    margin-top:40px;
-
     width:100%;
 
-    padding:16px;
+    margin-top:30px;
+
+    padding:15px;
 
     border:none;
 
@@ -103,17 +187,9 @@ body{
 
     border-radius:12px;
 
-    font-size:18px;
+    font-size:16px;
 
     cursor:pointer;
-
-    transition:0.3s;
-
-}
-
-.admin-btn:hover{
-
-    background:#5d22cf;
 
 }
 
@@ -122,11 +198,9 @@ body{
 
 .main-content{
 
-    margin-left:250px;
+    margin-left:280px;
 
-    width:100%;
-
-    padding:40px;
+    padding:20px 40px;
 
 }
 
@@ -137,25 +211,25 @@ body{
 
     text-align:center;
 
-    padding-top:20px;
+    padding-top:30px;
 
 }
 
 .hero h1{
 
-    font-size:92px;
+    font-size:72px;
 
-    font-weight:bold;
-
-    line-height:1.05;
+    line-height:1.1;
 
     margin-bottom:20px;
+
+    font-weight:bold;
 
 }
 
 .hero p{
 
-    font-size:28px;
+    font-size:24px;
 
     color:#555;
 
@@ -168,13 +242,13 @@ body{
 
     text-align:center;
 
-    margin-top:70px;
+    margin-top:60px;
 
 }
 
 .role-login h2{
 
-    font-size:36px;
+    font-size:34px;
 
     margin-bottom:25px;
 
@@ -192,7 +266,7 @@ body{
 
 .role-buttons button{
 
-    padding:18px 45px;
+    padding:18px 42px;
 
     border:none;
 
@@ -207,6 +281,8 @@ body{
     cursor:pointer;
 
     transition:0.3s;
+
+    box-shadow:0px 5px 15px rgba(0,0,0,0.12);
 
 }
 
@@ -230,19 +306,6 @@ body{
     padding:60px 20px;
 
     text-align:center;
-
-}
-
-
-/* HEADINGS */
-
-.booking-form h2,
-.painter-section h2,
-.admin-section h2{
-
-    font-size:48px;
-
-    margin-bottom:40px;
 
 }
 
@@ -301,18 +364,10 @@ form button{
 
     cursor:pointer;
 
-    transition:0.3s;
-
-}
-
-form button:hover{
-
-    background:#5d22cf;
-
 }
 
 
-/* BOOKING CARDS */
+/* CARDS */
 
 #bookingsContainer,
 #painterWorks{
@@ -351,7 +406,7 @@ form button:hover{
 
     margin-bottom:15px;
 
-    font-size:32px;
+    font-size:30px;
 
 }
 
@@ -363,32 +418,40 @@ form button:hover{
 
 }
 
-.booking-card button{
 
-    width:100%;
-
-    margin-top:15px;
-
-}
-
-
-/* MOBILE RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:768px){
 
-    body{
+    .top-navbar{
 
         flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .top-links{
+
+        flex-direction:column;
+
+        text-align:center;
 
     }
 
     .sidebar{
 
-        width:100%;
+        position:relative;
+
+        width:92%;
 
         height:auto;
 
-        position:relative;
+        top:0;
+
+        left:0;
+
+        margin:20px auto;
 
     }
 
@@ -402,19 +465,13 @@ form button:hover{
 
     .hero h1{
 
-        font-size:48px;
+        font-size:42px;
 
     }
 
     .hero p{
 
-        font-size:20px;
-
-    }
-
-    .role-login{
-
-        margin-top:40px;
+        font-size:18px;
 
     }
 
