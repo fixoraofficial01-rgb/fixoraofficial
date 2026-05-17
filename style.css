@@ -38,7 +38,7 @@ body{
 
 .top-logo{
 
-    font-size:36px;
+    font-size:34px;
 
     font-weight:bold;
 
@@ -60,11 +60,11 @@ body{
 
     font-size:17px;
 
+    color:#333;
+
     cursor:pointer;
 
     transition:0.3s;
-
-    color:#333;
 
 }
 
@@ -91,6 +91,14 @@ body{
     font-weight:bold;
 
     cursor:pointer;
+
+    transition:0.3s;
+
+}
+
+.top-btn:hover{
+
+    background:#5d22cf;
 
 }
 
@@ -191,6 +199,14 @@ body{
 
     cursor:pointer;
 
+    transition:0.3s;
+
+}
+
+.admin-btn:hover{
+
+    background:#5d22cf;
+
 }
 
 
@@ -198,20 +214,20 @@ body{
 
 .main-content{
 
-    margin-left:280px;
+    margin-left:290px;
 
-    padding:20px 40px;
+    padding:40px;
 
 }
 
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
 
     text-align:center;
 
-    padding-top:30px;
+    margin-top:40px;
 
 }
 
@@ -221,13 +237,15 @@ body{
 
     line-height:1.1;
 
-    margin-bottom:20px;
-
     font-weight:bold;
+
+    color:#111;
 
 }
 
 .hero p{
+
+    margin-top:25px;
 
     font-size:24px;
 
@@ -236,21 +254,21 @@ body{
 }
 
 
-/* LOGIN ROLE */
+/* LOGIN SECTION */
 
 .role-login{
 
     text-align:center;
 
-    margin-top:60px;
+    margin-top:80px;
 
 }
 
 .role-login h2{
 
-    font-size:34px;
+    font-size:40px;
 
-    margin-bottom:25px;
+    margin-bottom:30px;
 
 }
 
@@ -260,21 +278,21 @@ body{
 
     justify-content:center;
 
-    gap:20px;
+    gap:25px;
 
 }
 
 .role-buttons button{
 
-    padding:18px 42px;
-
-    border:none;
-
-    border-radius:14px;
-
     background:#7b3ff2;
 
     color:white;
+
+    border:none;
+
+    padding:18px 45px;
+
+    border-radius:14px;
 
     font-size:22px;
 
@@ -295,131 +313,7 @@ body{
 }
 
 
-/* SECTIONS */
-
-.booking-form,
-.painter-section,
-.admin-section{
-
-    display:none;
-
-    padding:60px 20px;
-
-    text-align:center;
-
-}
-
-
-/* FORM */
-
-form{
-
-    width:450px;
-
-    margin:auto;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
-}
-
-input,
-textarea,
-select{
-
-    padding:16px;
-
-    border-radius:12px;
-
-    border:1px solid #ccc;
-
-    font-size:17px;
-
-}
-
-textarea{
-
-    resize:none;
-
-    height:120px;
-
-}
-
-form button{
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:12px;
-
-    background:#7b3ff2;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-}
-
-
-/* CARDS */
-
-#bookingsContainer,
-#painterWorks{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:30px;
-
-    margin-top:50px;
-
-}
-
-.booking-card{
-
-    background:white;
-
-    width:350px;
-
-    padding:25px;
-
-    border-radius:20px;
-
-    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
-
-    text-align:left;
-
-}
-
-.booking-card h3{
-
-    color:#7b3ff2;
-
-    margin-bottom:15px;
-
-    font-size:30px;
-
-}
-
-.booking-card p{
-
-    margin-bottom:12px;
-
-    font-size:18px;
-
-}
-
-
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -435,7 +329,7 @@ form button{
 
         flex-direction:column;
 
-        text-align:center;
+        align-items:center;
 
     }
 
@@ -480,12 +374,6 @@ form button{
         flex-direction:column;
 
         align-items:center;
-
-    }
-
-    form{
-
-        width:100%;
 
     }
 
