@@ -1,25 +1,42 @@
+// script.js
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
+
   getFirestore,
+
   collection,
+
   addDoc,
+
   getDocs,
+
   doc,
+
   updateDoc
+
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 
 // FIREBASE CONFIG
 
 const firebaseConfig = {
+
   apiKey: "AIzaSyCLL7TAhFYwEwk2a0Af_FBmABabwFOphgE",
+
   authDomain: "fixora-95558.firebaseapp.com",
+
   projectId: "fixora-95558",
+
   storageBucket: "fixora-95558.firebasestorage.app",
+
   messagingSenderId: "803491664750",
+
   appId: "1:803491664750:web:b4eaae2888945cd725677f",
+
   measurementId: "G-ETZTPV47QG"
+
 };
 
 
@@ -39,7 +56,7 @@ const painterSection = document.getElementById("painterSection");
 const adminSection = document.getElementById("adminSection");
 
 
-// ROLE SWITCHING
+// SHOW CUSTOMER
 
 window.showCustomer = function(){
 
@@ -51,6 +68,9 @@ window.showCustomer = function(){
 
 };
 
+
+// SHOW PAINTER
+
 window.showPainter = function(){
 
   customerSection.style.display = "none";
@@ -60,6 +80,9 @@ window.showPainter = function(){
   adminSection.style.display = "none";
 
 };
+
+
+// SHOW ADMIN
 
 window.showAdmin = function(){
 
@@ -104,7 +127,7 @@ bookingForm.addEventListener("submit", async function(e){
 
   await addDoc(collection(db, "bookings"), bookingData);
 
-  alert("Booking Submitted");
+  alert("Booking Submitted Successfully");
 
   bookingForm.reset();
 
@@ -133,9 +156,7 @@ painterForm.addEventListener("submit", async function(e){
 
     area: formData.get("area"),
 
-    radius: formData.get("radius"),
-
-    createdAt: new Date()
+    radius: formData.get("radius")
 
   };
 
@@ -169,7 +190,7 @@ async function getPainters(){
 }
 
 
-// ADMIN DASHBOARD
+// GET BOOKINGS
 
 const bookingsContainer = document.getElementById("bookingsContainer");
 
@@ -191,9 +212,11 @@ async function getBookings(){
     painters.forEach((painter) => {
 
       painterOptions += `
+
         <option value="${painter}">
           ${painter}
         </option>
+
       `;
 
     });
@@ -212,14 +235,14 @@ async function getBookings(){
 
         <p><strong>Status:</strong> ${data.status}</p>
 
-        <p>
-          <strong>Assigned Painter:</strong>
-          ${data.assignedPainter}
-        </p>
+        <p><strong>Assigned Painter:</strong> ${data.assignedPainter}</p>
 
         <select id="painter-${bookingDoc.id}">
+
           <option>Select Painter</option>
+
           ${painterOptions}
+
         </select>
 
         <button onclick="assignPainter('${bookingDoc.id}')">
@@ -261,7 +284,7 @@ window.assignPainter = async function(bookingId){
 
   });
 
-  alert("Painter Assigned");
+  alert("Painter Assigned Successfully");
 
   getBookings();
 
@@ -372,6 +395,6 @@ window.completeWork = async function(bookingId){
 };
 
 
-// LOAD BOOKINGS
+// INITIAL LOAD
 
 getBookings();
