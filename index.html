@@ -17,225 +17,249 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- SIDEBAR -->
 
-    <nav class="navbar">
+    <div class="sidebar">
 
-        <div class="logo">
-            FIXORA
+        <div class="sidebar-logo">
+            🛠 FIXORA
         </div>
 
-        <ul class="nav-links">
+        <ul class="sidebar-menu">
 
-            <li>Home</li>
-
-            <li>Services</li>
-
-            <li onclick="showAdmin()">
-                Admin Dashboard
+            <li class="active">
+                Dashboard
             </li>
 
-            <li>Contact</li>
+            <li>
+                Bookings
+            </li>
+
+            <li>
+                Painters
+            </li>
+
+            <li>
+                Earnings
+            </li>
+
+            <li>
+                Reviews
+            </li>
+
+            <li>
+                Messages
+            </li>
 
         </ul>
 
-    </nav>
+        <button class="admin-btn" onclick="showAdmin()">
+            Admin Panel
+        </button>
+
+    </div>
 
 
-    <!-- HERO SECTION -->
+    <!-- MAIN CONTENT -->
 
-    <section class="hero">
+    <div class="main-content">
 
-        <h1>
-            Book Trusted Painters Near You
-        </h1>
+        <!-- HERO SECTION -->
 
-        <p>
-            Verified nearby painters for fast and professional service.
-        </p>
+        <section class="hero">
 
-    </section>
+            <h1>
+                Book Trusted Painters Near You
+            </h1>
 
+            <p>
+                Verified nearby painters for fast and professional service.
+            </p>
 
-    <!-- LOGIN ROLE -->
-
-    <section class="role-login">
-
-        <h2>
-            Select Login Role
-        </h2>
-
-        <div class="role-buttons">
-
-            <button onclick="showCustomer()">
-                Customer
-            </button>
-
-            <button onclick="showPainter()">
-                Painter
-            </button>
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- CUSTOMER SECTION -->
+        <!-- LOGIN ROLE -->
 
-    <section class="booking-form" id="customerSection">
+        <section class="role-login">
 
-        <h2>
-            Book A Painter
-        </h2>
+            <h2>
+                Select Login Role
+            </h2>
 
-        <form id="bookingForm">
+            <div class="role-buttons">
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Customer Name"
-                required
-            >
+                <button onclick="showCustomer()">
+                    Customer
+                </button>
 
-            <input
-                type="tel"
-                name="mobile"
-                placeholder="Mobile Number"
-                required
-            >
+                <button onclick="showPainter()">
+                    Painter
+                </button>
 
-            <input
-                type="text"
-                name="address"
-                placeholder="Address"
-                required
-            >
+            </div>
 
-            <textarea
-                name="work"
-                placeholder="Describe Painting Work"
-            ></textarea>
-
-            <select name="materials">
-
-                <option>
-                    Need Materials?
-                </option>
-
-                <option>
-                    Yes
-                </option>
-
-                <option>
-                    No
-                </option>
-
-            </select>
-
-            <button type="submit">
-                Submit Booking
-            </button>
-
-        </form>
-
-    </section>
+        </section>
 
 
-    <!-- PAINTER SECTION -->
+        <!-- CUSTOMER SECTION -->
 
-    <section class="painter-section" id="painterSection">
+        <section class="booking-form" id="customerSection">
 
-        <h2>
-            Painter Login
-        </h2>
+            <h2>
+                Book A Painter
+            </h2>
 
-        <form id="loginForm">
+            <form id="bookingForm">
 
-            <input
-                type="tel"
-                id="loginMobile"
-                placeholder="Enter Painter Mobile Number"
-                required
-            >
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Customer Name"
+                    required
+                >
 
-            <button type="submit">
-                Login
-            </button>
+                <input
+                    type="tel"
+                    name="mobile"
+                    placeholder="Mobile Number"
+                    required
+                >
 
-        </form>
+                <input
+                    type="text"
+                    name="address"
+                    placeholder="Address"
+                    required
+                >
 
-        <div id="painterWorks"></div>
+                <textarea
+                    name="work"
+                    placeholder="Describe Painting Work"
+                ></textarea>
 
-    </section>
+                <select name="materials">
+
+                    <option>
+                        Need Materials?
+                    </option>
+
+                    <option>
+                        Yes
+                    </option>
+
+                    <option>
+                        No
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Submit Booking
+                </button>
+
+            </form>
+
+        </section>
 
 
-    <!-- ADMIN SECTION -->
+        <!-- PAINTER LOGIN -->
 
-    <section class="admin-section" id="adminSection">
+        <section class="painter-section" id="painterSection">
 
-        <h2>
-            Admin Dashboard
-        </h2>
+            <h2>
+                Painter Login
+            </h2>
 
-        <form id="painterForm">
+            <form id="loginForm">
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Painter Name"
-                required
-            >
+                <input
+                    type="tel"
+                    id="loginMobile"
+                    placeholder="Enter Painter Mobile Number"
+                    required
+                >
 
-            <input
-                type="tel"
-                name="mobile"
-                placeholder="Painter Mobile"
-                required
-            >
+                <button type="submit">
+                    Login
+                </button>
 
-            <input
-                type="text"
-                name="experience"
-                placeholder="Experience"
-                required
-            >
+            </form>
 
-            <input
-                type="text"
-                name="area"
-                placeholder="Area"
-                required
-            >
+            <div id="painterWorks"></div>
 
-            <select name="radius">
+        </section>
 
-                <option>
-                    Service Radius
-                </option>
 
-                <option>
-                    3 KM
-                </option>
+        <!-- ADMIN PANEL -->
 
-                <option>
-                    5 KM
-                </option>
+        <section class="admin-section" id="adminSection">
 
-                <option>
-                    10 KM
-                </option>
+            <h2>
+                Admin Dashboard
+            </h2>
 
-            </select>
+            <form id="painterForm">
 
-            <button type="submit">
-                Register Painter
-            </button>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Painter Name"
+                    required
+                >
 
-        </form>
+                <input
+                    type="tel"
+                    name="mobile"
+                    placeholder="Painter Mobile"
+                    required
+                >
 
-        <div id="bookingsContainer"></div>
+                <input
+                    type="text"
+                    name="experience"
+                    placeholder="Experience"
+                    required
+                >
 
-    </section>
+                <input
+                    type="text"
+                    name="area"
+                    placeholder="Area"
+                    required
+                >
+
+                <select name="radius">
+
+                    <option>
+                        Service Radius
+                    </option>
+
+                    <option>
+                        3 KM
+                    </option>
+
+                    <option>
+                        5 KM
+                    </option>
+
+                    <option>
+                        10 KM
+                    </option>
+
+                </select>
+
+                <button type="submit">
+                    Register Painter
+                </button>
+
+            </form>
+
+            <div id="bookingsContainer"></div>
+
+        </section>
+
+    </div>
 
 
     <script type="module" src="script.js"></script>
