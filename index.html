@@ -1,182 +1,244 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Fixora</title>
+    <title>Fixora</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+    <!-- NAVBAR -->
 
-  <!-- NAVBAR -->
+    <nav class="navbar">
 
-  <nav class="navbar">
+        <div class="logo">
+            FIXORA
+        </div>
 
-    <div class="logo">
-      FIXORA
-    </div>
+        <ul class="nav-links">
 
-    <ul class="nav-links">
-      <li>Home</li>
-      <li>Services</li>
-      <li>Dashboard</li>
-    </ul>
+            <li>Home</li>
 
-  </nav>
+            <li>Services</li>
 
+            <li onclick="showAdmin()">
+                Admin Dashboard
+            </li>
 
-  <!-- HERO -->
+            <li>Contact</li>
 
-  <section class="hero">
+        </ul>
 
-    <h1>Book Trusted Painters Near You</h1>
+    </nav>
 
-    <p>
-      Verified nearby painters for fast and professional service.
-    </p>
 
-  </section>
+    <!-- HERO SECTION -->
 
+    <section class="hero">
 
-  <!-- ROLE LOGIN -->
+        <h1>
+            Book Trusted Painters Near You
+        </h1>
 
-  <section class="role-login">
+        <p>
+            Verified nearby painters for fast and professional service.
+        </p>
 
-    <h2>Select Login Role</h2>
+    </section>
 
-    <div class="role-buttons">
 
-      <button onclick="showCustomer()">
-        Customer
-      </button>
+    <!-- LOGIN ROLE -->
 
-      <button onclick="showPainter()">
-        Painter
-      </button>
+    <section class="role-login">
 
-      <button onclick="showAdmin()">
-        Admin
-      </button>
+        <h2>
+            Select Login Role
+        </h2>
 
-    </div>
+        <div class="role-buttons">
 
-  </section>
+            <button onclick="showCustomer()">
+                Customer
+            </button>
 
+            <button onclick="showPainter()">
+                Painter
+            </button>
 
-  <!-- CUSTOMER SECTION -->
+        </div>
 
-  <section class="booking-form" id="customerSection">
+    </section>
 
-    <h2>Book A Painter</h2>
 
-    <form id="bookingForm">
+    <!-- CUSTOMER SECTION -->
 
-      <input type="text" name="name" placeholder="Customer Name" required>
+    <section class="booking-form" id="customerSection">
 
-      <input type="tel" name="mobile" placeholder="Mobile Number" required>
+        <h2>
+            Book A Painter
+        </h2>
 
-      <input type="text" name="address" placeholder="Address" required>
+        <form id="bookingForm">
 
-      <textarea name="work" placeholder="Describe Painting Work"></textarea>
+            <input
+                type="text"
+                name="name"
+                placeholder="Customer Name"
+                required
+            >
 
-      <select name="materials">
+            <input
+                type="tel"
+                name="mobile"
+                placeholder="Mobile Number"
+                required
+            >
 
-        <option>Need Materials?</option>
-        <option>Yes</option>
-        <option>No</option>
+            <input
+                type="text"
+                name="address"
+                placeholder="Address"
+                required
+            >
 
-      </select>
+            <textarea
+                name="work"
+                placeholder="Describe Painting Work"
+            ></textarea>
 
-      <button type="submit">
-        Submit Booking
-      </button>
+            <select name="materials">
 
-    </form>
+                <option>
+                    Need Materials?
+                </option>
 
-  </section>
+                <option>
+                    Yes
+                </option>
 
+                <option>
+                    No
+                </option>
 
-  <!-- PAINTER SECTION -->
+            </select>
 
-  <section class="painter-section" id="painterSection">
+            <button type="submit">
+                Submit Booking
+            </button>
 
-    <h2>Painter Login</h2>
+        </form>
 
-    <form id="loginForm">
+    </section>
 
-      <input
-        type="tel"
-        id="loginMobile"
-        placeholder="Enter Painter Mobile Number"
-        required
-      >
 
-      <button type="submit">
-        Login
-      </button>
+    <!-- PAINTER SECTION -->
 
-    </form>
+    <section class="painter-section" id="painterSection">
 
-    <div id="painterWorks">
+        <h2>
+            Painter Login
+        </h2>
 
-    </div>
+        <form id="loginForm">
 
-  </section>
+            <input
+                type="tel"
+                id="loginMobile"
+                placeholder="Enter Painter Mobile Number"
+                required
+            >
 
+            <button type="submit">
+                Login
+            </button>
 
-  <!-- ADMIN SECTION -->
+        </form>
 
-  <section class="admin-section" id="adminSection">
+        <div id="painterWorks"></div>
 
-    <h2>Admin Dashboard</h2>
+    </section>
 
-    <div class="admin-register">
 
-      <h3>Register Painter</h3>
+    <!-- ADMIN SECTION -->
 
-      <form id="painterForm">
+    <section class="admin-section" id="adminSection">
 
-        <input type="text" name="name" placeholder="Painter Name" required>
+        <h2>
+            Admin Dashboard
+        </h2>
 
-        <input type="tel" name="mobile" placeholder="Painter Mobile" required>
+        <form id="painterForm">
 
-        <input type="text" name="experience" placeholder="Experience" required>
+            <input
+                type="text"
+                name="name"
+                placeholder="Painter Name"
+                required
+            >
 
-        <input type="text" name="area" placeholder="Area" required>
+            <input
+                type="tel"
+                name="mobile"
+                placeholder="Painter Mobile"
+                required
+            >
 
-        <select name="radius">
+            <input
+                type="text"
+                name="experience"
+                placeholder="Experience"
+                required
+            >
 
-          <option>Service Radius</option>
-          <option>3 KM</option>
-          <option>5 KM</option>
-          <option>10 KM</option>
+            <input
+                type="text"
+                name="area"
+                placeholder="Area"
+                required
+            >
 
-        </select>
+            <select name="radius">
 
-        <button type="submit">
-          Register Painter
-        </button>
+                <option>
+                    Service Radius
+                </option>
 
-      </form>
+                <option>
+                    3 KM
+                </option>
 
-    </div>
+                <option>
+                    5 KM
+                </option>
 
-    <div id="bookingsContainer">
+                <option>
+                    10 KM
+                </option>
 
-    </div>
+            </select>
 
-  </section>
+            <button type="submit">
+                Register Painter
+            </button>
 
+        </form>
 
-  <script type="module" src="script.js"></script>
+        <div id="bookingsContainer"></div>
+
+    </section>
+
+
+    <script type="module" src="script.js"></script>
 
 </body>
 
